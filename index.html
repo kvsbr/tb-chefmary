@@ -3,19 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ChatMary</title>
-  <style>
-    html, body { height: 100%; margin: 0; }
-    #tb { border: 0; width: 100%; height: 100dvh; display: block; }
-  </style>
-</head>
-<body>
-  <iframe id="tb" title="Typebot"></iframe>
+  <title>ChatChefMary</title>
+
+  <meta http-equiv="refresh" content="0; url=https://tb.lavishcreative.com/chat-chefmary">
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://tb.lavishcreative.com/chat-chefmary">
+  </noscript>
 
   <script>
-    const base = "https://tb.lavishcreative.com/chat-chefmary";
-    const qs = window.location.search;
-    document.getElementById("tb").src = base + (qs || "");
+    (function () {
+      var base = "https://tb.lavishcreative.com/chat-chefmary";
+      var q = location.search || "";
+      var h = location.hash || "";
+      location.replace(base + q + h);
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirigiendo a ChatChefMary… 
+    <a id="link" href="https://tb.lavishcreative.com/chat-chefmary">haga clic aquí</a>
+    si no se redirige automáticamente.
+  </p>
+  <script>
+    document.getElementById("link").href =
+      "https://tb.lavishcreative.com/chat-chefmary" + (location.search||"") + (location.hash||"");
   </script>
 </body>
 </html>
