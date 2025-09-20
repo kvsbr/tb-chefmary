@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Typebot</title>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    #tb { border: 0; width: 100%; height: 100dvh; display: block; }
+  </style>
+</head>
+<body>
+  <iframe id="tb" title="Typebot"></iframe>
+
+  <script>
+    // Base do seu bot
+    const base = "https://tb.lavishcreative.com/chat-chefmary";
+
+    // Repassa todos os query params da página para o iframe
+    const qs = window.location.search; // ex.: "?video=panes&utm_source=meta"
+    document.getElementById("tb").src = base + (qs || "");
+
+    // (Opcional) limpa a barra de endereço depois de capturar os params
+    // if (qs) history.replaceState({}, "", location.pathname);
+  </script>
+</body>
+</html>
